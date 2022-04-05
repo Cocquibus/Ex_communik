@@ -1,0 +1,273 @@
+/*initial*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+body{
+    font-family: Inter;
+    margin: 0px;
+    padding: 0px;
+}
+/*MEDIA*/
+@media (min-width:1170px){
+    header{
+        margin: auto;
+        width: 1170px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    }
+    main{
+        margin: auto;
+        width: 1170px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    }
+    footer{
+        margin: auto;
+        width: 1170px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    }
+}
+@media (max-width:1024px){
+    header{
+        grid-template-columns:1fr;
+        justify-content: center !important;
+    }
+    nav img, #logo{
+        display: none;
+    }
+    nav ul{
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    img{
+        width: 50%;
+    }
+    footer{
+        height: 300px !important;
+    }
+    #sectionTrois img:nth-child(1){
+        width: 100px;
+    }
+    .h1sectiontrois{
+        margin: 10px !important;
+    }
+    #sectionQuatre img:nth-child(1){
+        width: 100px;
+    }
+}
+@media (min-width:320px) and (max-width:720px){
+    body{
+        font-size: xx-small;
+    }
+    nav ul{
+        grid-template-columns: 1fr !important;
+    }
+    #sectionDeux img{
+        display: none;
+        
+    }
+    #sectionDeux{
+        grid-template-columns: 1fr !important;
+        margin: 30px !important;
+        padding: 30px !important;
+    }
+    #sectionTrois{
+        grid-template-columns: 1fr !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        justify-content: center !important;
+    }
+    #sectionQuatre{
+        grid-template-columns: 1fr !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .imgsectiontrois{
+        display: none !important;
+    }
+    .evolutionsectiontrois{
+        grid-column: 1/4 !important;
+    }
+    .evolutionsectionquatre{
+        grid-column: 1/4 !important;
+    }
+    .evolutionsectiontrois button{
+        margin-bottom: 30px;
+    }
+    .evolutionsectionquatre button{
+        margin-bottom: 30px;
+    }
+    .h1sectiontrois{
+        margin: 10px !important;
+        margin-right: 200px !important;
+        padding: 10px !important;
+    }
+    #sectionTrois img{
+        width: 180px !important;
+    }
+    #sectionQuatre img{
+        width: 180px !important;
+    }
+    .h1sectionquatre{
+        margin: 10px !important;
+        margin-right: 200px !important;
+        padding: 10px !important;
+    }
+    footer{
+        grid-template-columns: 1fr;
+        height: 700px !important;
+    }
+    .centragefooter{
+        grid-column: 1/3 !important;
+    }
+}
+/*disposition des éléménts dans la grille*/
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    background-color: #1A1A1D;
+}
+#sectionUn{
+    grid-area: sectionUn;
+    display: grid;
+    justify-content: center;
+}
+#sectionDeux{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#sectionTrois{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 50px;
+    background-color:#334D5C;
+    padding-bottom: 50px;
+}
+#sectionQuatre{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+/*début du css*/
+/*HEADER*/
+nav ul{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(6,1fr);
+    margin: 0px;
+    padding: 0px;
+}
+nav li{
+    margin: 10px;
+}
+nav a{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+nav a div{
+    margin-bottom: 10px;
+}
+/*section un*/
+#sectionUn img{
+    width: 100%;
+    height: auto;
+}
+/*section deux*/
+#sectionDeux img{
+    margin-left: 100px;
+}
+#sectionDeux p{
+    margin-right: 70px;
+}
+#sectionDeux h1{
+    margin-right: 80px;
+}
+/*section trois*/
+.imgsectiontrois{
+    grid-column: 1/2;
+    margin-left: 180px;
+}
+.h1sectiontrois{
+    grid-column: 2/4;
+    margin-right: 80px;
+    margin-left: 150px;
+    color: white;
+}
+.evolutionsectiontrois{
+    text-align: center;
+    color: white;
+}
+#sectionTrois button{
+    border: none;
+    background-color: white;
+    padding: 20px;
+}
+#sectionTrois p{
+    margin: 50px;
+}
+#sectionTrois h1{
+    margin: 40px;
+}
+#sectionTrois img{
+    width: 150px;
+}
+/*section quatre*/
+#sectionQuatre button{
+    border: none;
+    color: white;
+    padding: 20px;
+    background-color: rgb(65, 65, 65);
+}
+.h1sectionquatre{
+    grid-column: 2/4;
+    margin-right: 80px;
+    margin-left: 150px;
+    color: black;
+}
+.evolutionsectionquatre{
+    text-align: center;
+    color: white;
+}
+.evolutionsectionquatre p{
+    color: black;
+}
+#sectionQuatre p{
+    margin: 50px;
+}
+#sectionQuatre h1{
+    margin: 40px;
+}
+#sectionQuatre img{
+    width: 150px;
+}
+/*footer*/
+footer img{
+    width: 80px;
+}
+footer{
+    background-color: #333336;
+    height: 200px;
+    padding-top: 50px;
+}
+footer h1{
+    color: white;
+    margin-left: 60px;
+    font-size: medium;
+}
+footer img{
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 50px;
+}
+.centragefooter{
+    margin-left: 70px;
+}
